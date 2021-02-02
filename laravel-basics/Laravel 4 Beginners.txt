@@ -1,0 +1,18 @@
+How to start after pulling a Laravel Project:
+1.	".env.example" datei kopieren
+2.	Kopie in ".env" umbenennen
+3.	Im Terminal 'composer update' eingeben
+4.	Im Terminal 'php artisan key:generate' eingeben
+5.	"database" ordner als neue Datasource deklarieren
+6.	Bei sqLite in ".env" die DB zeilen auf 'DB_CONNECTION=sqlite' reduzieren
+7.	Webserver config:
+		Host:		localhost
+		Document-Root:	Project Root Folder\public
+		Router-Script:	"Project Root Folder"\server.php
+8.	WebServer starten
+9.	Funktion testen
+10.	Have Fun working with Laravel
+10. alt:Bitten Sie den zuständigen INSY/SEW Lehrer um Hilfe.
+
+Wundercommands; When nothing seems to work like last time:
+Your DB doesnt work properly?	->	'php artisan migrate:refresh --seed'

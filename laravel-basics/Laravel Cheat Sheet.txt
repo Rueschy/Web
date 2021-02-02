@@ -1,0 +1,60 @@
+// update composer itself
+composer self-update
+
+// installing laravel:
+composer global require "laravel/installer=~1.1"
+
+// create a new project:
+laravel new myFirstLaravelProject
+
+
+// update all dependencies:
+composer update
+
+// generate application key:
+php artisan key:generate
+
+// create a new migration including table "devices":
+php artisan make:migration create_devices_table --create="devices"
+
+// refresh object cache
+composer dump-autoload
+
+// perform the migration:
+php artisan migrate
+// undo the last migration:
+php artisan migrate:rollback
+// perform all rollbacks back to initial db
+php artisan migrate:reset
+// reset + migrate
+php artisan migrate:refresh
+
+// create a new seeder class:
+php artisan make:seeder DevicesTableSeeder
+
+// call all seeders
+php artisan db:seed
+
+// call a single seeder
+php artisan db:seed --class DeviceTableSeeder
+
+// create and seed the database (all together):
+php artisan migrate:refresh --seed
+
+// create a model to the table (Device --> devices)
+php artisan make:model Device
+
+// create a model with appropriate migration file
+php artisan make:model Device -- migration
+
+// create a controller class
+php artisan make:controller DeviceContoller --resource
+
+// create an api controller class
+php artisan make:controller DeviceContoller --api
+
+// show routing table
+php artisan route:list
+
+
+

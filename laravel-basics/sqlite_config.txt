@@ -1,0 +1,13 @@
+//To enable foreign key constraints for SQLite connections, you should add the  foreign_key_constraints option to your config/database.php configuration file:
+
+'sqlite' => [
+    // ...
+    'foreign_key_constraints' => true,
+],
+
+// also insert this into the boot() method in App\Providers\AppServiceProvider
+
+if (DB::connection() instanceof \Illuminate\Database\SQLiteConnection) {
+    DB::statement(DB::raw('PRAGMA foreign_keys=1'));
+}
+
