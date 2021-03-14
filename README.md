@@ -1,2 +1,3 @@
 # Web
-Web Projects - PHP / HTML / CSS / JS
+## Web Projects from School (HTL Villach Information Technology)
+- PHP / HTML / CSS / JS
